@@ -1,0 +1,42 @@
+/* colors:
+peach/info: #FAA275
+darker peach/secondary: #FF8C61
+pink: #CE6A85
+purple/reset: #985277
+dark purple/primary: #5C374C
+success/cards:#fdd5c1 */
+/* 
+font:
+font-family: 'Nunito', sans-serif;
+font-family: 'Roboto Mono', monospace; */
+
+body {
+ background-image: url("./assets/images/curvedPattern.jpg");
+ background-size: cover;
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+font-family: 'Roboto Mono', monospace; 
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+ -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; 
+}
+
+/* code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+
+.navbar-title {
+  font-family: 'Nunito', sans-serif;
+font-family: 'Roboto Mono', monospace;
+display: flex;
+justify-content: center;
+}
+
+
+#root {
+  height: 100vh;
+  
+}

@@ -1,0 +1,12 @@
+button{
+    background-color:"#5C374C"
+  }
+  button:active{
+    background-color:"#5C374C"
+  }
+  button:focus{
+    background-color:"#5C374C"
+  }
+  button:visited{
+    background-color:"#5C374C"
+  }
