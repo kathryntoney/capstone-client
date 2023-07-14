@@ -31,7 +31,7 @@ const DELETE_FAVORITE = "DELETE_FAVORITE"
 
 export const signUp = createAsyncThunk(SIGN_UP, async (params, thunkAPI) => {
 
-    let response = await axios.post('/registration', params.formData)
+    let response = await axios.post('https://pocketsomm.onrender.com/registration', params.formData)
 
     let jwt = response.data.token
 
@@ -64,7 +64,7 @@ export const checkToken = createAsyncThunk(CHECK_TOKEN, async (params, thunkAPI)
         let token = localStorage.token
         console.log('inside checkToken 1', token)
         //api to check if token is valid
-        let response = await axios.get('/protected', {
+        let response = await axios.get('https://pocketsomm.onrender.com/protected', {
             headers: {
                 'authorization': token
             }
@@ -80,7 +80,7 @@ export const displayFavorite = createAsyncThunk(DISPLAY_FAVORITE, async (params,
     console.log('display fave thunk', userID)
     const token = localStorage.token
     try {
-        const response = await axios.get(`/wines/${userID}`, {
+        const response = await axios.get(`https://pocketsomm.onrender.com/wines/${userID}`, {
             headers: {
                 Authorization: token,
             },
@@ -95,7 +95,7 @@ export const displayFavorite = createAsyncThunk(DISPLAY_FAVORITE, async (params,
 
 export const addWine = createAsyncThunk(ADD_WINE, async (params, thunkAPI) => {
     try {
-        const response = await axios.post('/addwine', params.formData)
+        const response = await axios.post('https://pocketsomm.onrender.com/addwine', params.formData)
         return response.data
     } catch (error) {
         console.log('error adding new wine: ', error)
@@ -106,7 +106,7 @@ export const addWine = createAsyncThunk(ADD_WINE, async (params, thunkAPI) => {
 export const deleteFavorite = createAsyncThunk(DELETE_FAVORITE, async ({ favoriteID, userID }, thunkAPI) => {
     try {
         console.log('inside delete favorite try')
-        const response = await axios.delete(`/favorites/${favoriteID}`)
+        const response = await axios.delete(`https://pocketsomm.onrender.com/favorites/${favoriteID}`)
         console.log(response)
         return response.data
     } catch (error) {
