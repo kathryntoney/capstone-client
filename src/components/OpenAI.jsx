@@ -52,7 +52,7 @@ const OpenAI = ({ ocr }) => {
 
       const result = await openai.createCompletion({
         model: "text-davinci-003",
-        prompt: `Given these wines: ${ocr}, which 2 would pair best with ${dish}?`,
+        prompt: `Choosing from the following wines: ${ocr}, which two of them would pair best with ${dish}?`,
         temperature: 0.7,
         max_tokens: 2000,
 
