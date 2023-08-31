@@ -52,15 +52,15 @@ const OpenAI = ({ ocr }) => {
 
       const result = await openai.createCompletion({
         model: "text-davinci-003",
-        prompt: `Given these wines: ${ocr}. Which 2  would you recommend if I am eating ${dish}?`,
+        prompt: `Given these wines: ${ocr}, which 2 would pair best with ${dish}?`,
         temperature: 0.7,
         max_tokens: 2000,
 
       });
 
       setApiResponse(result.data.choices[0].text);
-    } catch (err) {
-
+    } catch (error) {
+      console.log(error);
       setApiResponse("Something is going wrong, Please try again.");
     }
 

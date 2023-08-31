@@ -38,7 +38,7 @@ const Login = () => {
                 password
             }
         }
-        console.log(data)
+        // console.log(data)
         dispatch(signIn(data)).then((response) => {
             dispatch(checkToken(response.payload))
             navigate('/')

@@ -42,7 +42,7 @@ export const signUp = createAsyncThunk(SIGN_UP, async (params, thunkAPI) => {
 })
 
 export const signIn = createAsyncThunk(SIGN_IN, async (params, thunkAPI) => {
-    let response = await axios.post('/login', params.formData)
+    let response = await axios.post('https://pocketsomm.onrender.com/login', params.formData)
     let token = response.data.token
     console.log('signIn thunk', token)
     let userID = response.data.userID
